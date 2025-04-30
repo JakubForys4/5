@@ -1,11 +1,10 @@
-Krzysztof 20
-Janusz 40
-Krzysztof 20
-Janusz 40
-ASDS 12
-abd 32
+Parse Error Error -1 
+Parse Error Error -1 
+Parse Error Error -1 
+Parse Error Error -1 
+Parse Error Error -1 
+Parse Error Error -1 
 asada dsada 21 2221
-ime sda 21
-sdasa dsasa 21
+Parse Error Error -1 
+Parse Error Error -1 
 sadsa dsad 21 24-03-2004
-WEQWQ sda 18 2000
