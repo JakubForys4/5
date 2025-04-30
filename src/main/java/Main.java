@@ -18,7 +18,7 @@ class Main {
 
       if (choice == 1) {
         System.out.print("Podaj imię: ");
-        String name = scanner.nextLine();
+        String name = scanner.nextLine().trim();
         System.out.print("Podaj nazwisko: ");
         String lastName = scanner.nextLine();
         System.out.print("Podaj wiek: ");
@@ -37,7 +37,7 @@ class Main {
         }
       } else if (choice == 3) {
         System.out.print("Podaj imię studenta: ");
-        String searchName = scanner.nextLine();
+        String searchName = scanner.nextLine().trim();
         s.findStudentByName(searchName);
       }
 
