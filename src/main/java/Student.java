@@ -17,7 +17,8 @@ public class Student {
   public int GetAge() {return Age;}
   public String GetBirthDate() {return BirthDate;}
 
-  public String ToString() {
+  @Override
+  public String toString() {
     return Name + " " + LastName + " " + Integer.toString(Age) + " " + BirthDate;
   }
 

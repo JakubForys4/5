@@ -1,5 +1,4 @@
-
-import java.io.IOException;//
+import java.io.IOException;
 import java.util.Scanner;
 
 class Main {
@@ -7,7 +6,6 @@ class Main {
     try { 
       Service s = new Service();
       Scanner scanner = new Scanner(System.in);
-      
 
       System.out.println("1. Dodaj studenta");
       System.out.println("2. Wyświetl studentów");
@@ -41,33 +39,20 @@ class Main {
         System.out.print("Podaj imię studenta: ");
         String searchName = scanner.nextLine().trim();
         s.findStudentByName(searchName);
-      }
-      else if(choice ==4){
+      } else if (choice == 4) {
         System.out.print("Podaj imię studenta do usunięcia: ");
-                  String nameToDelete = scanner.nextLine().trim();
-                  System.out.print("Podaj nazwisko studenta do usunięcia: ");
-                  String lastNameToDelete = scanner.nextLine().trim();
-                  boolean removed = s.removeStudent(nameToDelete, lastNameToDelete);
+        String nameToDelete = scanner.nextLine().trim();
+        System.out.print("Podaj nazwisko studenta do usunięcia: ");
+        String lastNameToDelete = scanner.nextLine().trim();
+        boolean removed = s.removeStudent(nameToDelete, lastNameToDelete);
 
-                  if (removed) {
-                    System.out.println("Student został usunięty.");
-                  } else {
-                    System.out.println("Nie znaleziono studenta o podanym imieniu i nazwisku.");
-                  }
-                } else if (choice == 5) {
-                  System.out.println("Zakończono działanie programu.");
-                  break;
-                } else {
-                  System.out.println("Niepoprawny wybór, spróbuj ponownie.");
-                }
-              }
-
-              scanner.close();
-            } catch (IOException e) {
-              System.out.println("Wystąpił błąd: " + e.getMessage());
-            }
-          }
+        if (removed) {
+          System.out.println("Student został usunięty.");
+        } else {
+          System.out.println("Nie znaleziono studenta o podanym imieniu i nazwisku.");
         }
+      } else {
+        System.out.println("Niepoprawny wybór.");
       }
 
       scanner.close();

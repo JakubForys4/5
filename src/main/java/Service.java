@@ -50,7 +50,7 @@ public class Service {
     boolean studentRemoved = false;
      ArrayList<Student> updatedStudents = new ArrayList<>();
         for (Student student : students) {
-          if (!(student.getName().equalsIgnoreCase(name) && student.getLastName().equalsIgnoreCase(lastName))) {
+          if (!(student.GetName().equalsIgnoreCase(name) && student.GetLastName().equalsIgnoreCase(lastName))) {
             updatedStudents.add(student);
           } else {
             studentRemoved = true;
