@@ -23,7 +23,7 @@ class Main {
         System.out.print("Podaj wiek: ");
         int age = scanner.nextInt();
         scanner.nextLine();
-        System.out.print("Podaj datę urodzenia (DD-MM-YYYY): ");
+        System.out.print("Podaj datę urodzenia (YYYY-MM-DD): ");
         String birthDate = scanner.nextLine();
 
         s.addStudent(new Student(name, lastName, age, birthDate));
