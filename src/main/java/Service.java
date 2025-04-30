@@ -45,4 +45,29 @@ public class Service {
     System.out.println("Nie znaleziono studenta o imieniu: " + name);
     return null;
   }
-}
+  public boolean removeStudent(String name, String lastName) throws IOException {
+    Collection<Student> students = getStudents();
+    boolean studentRemoved = false;
+     ArrayList<Student> updatedStudents = new ArrayList<>();
+        for (Student student : students) {
+          if (!(student.getName().equalsIgnoreCase(name) && student.getLastName().equalsIgnoreCase(lastName))) {
+            updatedStudents.add(student);
+          } else {
+            studentRemoved = true;
+          }
+        }
+
+        if (studentRemoved) {
+          
+          try (BufferedWriter writer = new BufferedWriter(new FileWriter("db.txt"))) {
+            for (Student student : updatedStudents) {
+              writer.append(student.toString());
+              writer.newLine();
+            }
+          } catch (IOException e) {
+            throw new IOException("Błąd przy zapisie do pliku.", e);
+          }
+        }
+        return studentRemoved;
+      }
+    }
