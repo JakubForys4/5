@@ -30,7 +30,19 @@ public class Service {
     return ret;
   }
 
-  public Student findStudentByName(String name) {
+  public Student findStudentByName(String name) throws IOException {
+    var students = getStudents();
+    for (Student student : students) {
+      if (student.GetName().equals(name)) {
+        System.out.println("Znaleziono studenta:");
+        System.out.println("Imię: " + student.GetName());
+        System.out.println("Nazwisko: " + student.GetLastName());
+        System.out.println("Wiek: " + student.GetAge());
+        System.out.println("Data urodzenia: " + student.GetBirthDate());
+        return student;
+      }
+    }
+    System.out.println("Nie znaleziono studenta o imieniu: " + name);
     return null;
   }
 }

@@ -10,6 +10,7 @@ class Main {
 
       System.out.println("1. Dodaj studenta");
       System.out.println("2. Wyświetl studentów");
+      System.out.println("3. Znajdź studenta po imieniu");
       System.out.print("Wybierz opcję: ");
 
       int choice = scanner.nextInt();
@@ -32,8 +33,12 @@ class Main {
         var students = s.getStudents();
         System.out.println("Lista studentów:");
         for (Student current : students) {
-          System.out.println(current.ToString());
+          System.out.println(current.toString());
         }
+      } else if (choice == 3) {
+        System.out.print("Podaj imię studenta: ");
+        String searchName = scanner.nextLine();
+        s.findStudentByName(searchName);
       }
 
       scanner.close();
